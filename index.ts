@@ -31,8 +31,8 @@ gameServer.register("basic_with_options", BasicRoom, {
 // Register StateHandlerRoom as "state_handler"
 //gameServer.register("auth", AuthRoom);
 
-app.use(express.static(path.join(__dirname, "static")));
-app.use('/', serveIndex(path.join(__dirname, "static"), {'icons': true}))
+//app.use(express.static(path.join(__dirname, "static")));
+//app.use('/', serveIndex(path.join(__dirname, "static"), {'icons': true}))
 
 gameServer.listen(port);
 
