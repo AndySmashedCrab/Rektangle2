@@ -3,6 +3,7 @@ import * as express from 'express';
 import * as serveIndex from 'serve-index';
 import { createServer } from 'http';
 import { Server } from 'colyseus';
+import { BasicRoom } from "./rooms/Main";
 
 process.on('uncaughtException', function(err) {
     console.log('Caught exception: ' + err);
@@ -20,7 +21,7 @@ var httpServer = http.createServer(app);
 var gameServer = new colyseus.Server({ server: httpServer });
 var Arena = require('./rooms/Main');
 
-gameServer.register('Arena', Arena)
+gameServer.register('Basic', Arena)
 
 gameServer.listen(port);
 
