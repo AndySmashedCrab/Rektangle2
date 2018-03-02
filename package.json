@@ -1,31 +1,20 @@
 {
-  "name": "colyseus-examples",
-  "version": "1.0.0",
-  "description": "Usage Examples of Colyseus Game Server",
+  "name": "colyseus-starter",
+  "version": "1.1.0",
+  "description": "Colyseus Server - Minimal example",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch '**/*.ts' --exec ts-node index.ts",
-    "bundle-colyseus-client": "browserify ./node_modules/colyseus.js/lib/index.js -s Colyseus -o static/colyseus.js",
-    "build": "npm run bundle-colyseus-client && tsc",
-    "heroku-postbuild": "npm run build"
-  },
-  "engines": {
-    "node": "8.9.1"
+    "start-production": "pm2 start index.js --node-args='--harmony --use-strict'",
+    "start": "nodemon --harmony ./index.js localhost 3553"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@types/uws": "^0.13.1",
-    "colyseus": "^0.8.11",
-    "colyseus.js": "^0.8.0",
-    "express": "^4.14.0",
-    "nodemon": "^1.11.0",
-    "serve-index": "^1.8.0",
-    "superagent": "^3.8.1"
+    "colyseus": "^0.4.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4"
   },
   "devDependencies": {
-    "browserify": "^14.4.0",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.4.2"
+    "nodemon": "^1.7.1"
   }
 }
