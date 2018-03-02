@@ -5,9 +5,7 @@ import { createServer } from 'http';
 import { Server } from 'colyseus';
 
 // Require BasicRoom handler
-import { BasicRoom } from "./rooms/01-basic";
-import { StateHandlerRoom } from "./rooms/02-state-handler";
-import { AuthRoom } from "./rooms/03-auth";
+import { BasicRoom } from "./rooms/Main";
 
 const port = Number(process.env.PORT || 2657);
 const app = express();
@@ -28,10 +26,10 @@ gameServer.register("basic_with_options", BasicRoom, {
 });
 
 // Register StateHandlerRoom as "state_handler"
-gameServer.register("state_handler", StateHandlerRoom);
+//gameServer.register("state_handler", StateHandlerRoom);
 
 // Register StateHandlerRoom as "state_handler"
-gameServer.register("auth", AuthRoom);
+//gameServer.register("auth", AuthRoom);
 
 app.use(express.static(path.join(__dirname, "static")));
 app.use('/', serveIndex(path.join(__dirname, "static"), {'icons': true}))
