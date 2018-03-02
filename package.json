@@ -2,7 +2,7 @@
   "name": "Rektangle",
   "version": "1.0.0",
   "description": "Rektangle",
-  "main": "index.js",
+  "main": "Main.js",
   "scripts": {
     "start": "nodemon --watch '**/*.ts' --exec ts-node index.ts",
     "bundle-colyseus-client": "browserify ./node_modules/colyseus.js/lib/index.js -s Colyseus -o static/colyseus.js",
