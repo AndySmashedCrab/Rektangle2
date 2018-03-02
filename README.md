@@ -1,14 +1,13 @@
-colyseus-starter
+tic-tac-toe
 ===
 
-Barebones project structure for running Colyseus Game Server. [View docs](http://gamestd.io/colyseus/docs)
+Simple Tic-Tac-Toe game powered by Colyseus Game Server.
 
-Dependencies
----
+**Important files to look at**:
 
-- [colyseus](http://npmjs.com/package/colyseus)
-- [express](http://npmjs.com/package/express)
-
-**Development dependencies**
-
-- [nodemon](https://www.npmjs.com/package/nodemon) - for reloading on code change.
+- Server-side
+  - [registering room](server/index.js#L13)
+  - [room implementation](server/rooms/tictactoe.js)
+- Client-side
+  - [room connection](frontend/src/screens/GameScreen.js#L13-L14)
+  - [patch handling](frontend/src/screens/GameScreen.js#L96-L122)
