@@ -1,7 +1,7 @@
 {
-  "name": "colyseus-examples",
+  "name": "Rektangle",
   "version": "1.0.0",
-  "description": "Usage Examples of Colyseus Game Server",
+  "description": "Rektangle",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch '**/*.ts' --exec ts-node index.ts",
